@@ -54,3 +54,52 @@ fadeInElements.forEach(function (fadeInElement, index) {
     opacity: 1,
   });
 });
+
+// new Swiper(선택자, 옵션)
+new Swiper(".notice-line .swiper", {
+  direction: "vertical",
+  autoplay: true, // 자동 재생 여부
+  loop: true, // 반복 재생 여부
+});
+
+new Swiper(".projects .swiper", {
+  slidesPerView: 3, // 한 번에 보여줄 슬라이드 개수
+  spaceBetween: 10, // 슬라이드 사이 여백
+  centeredSlides: true, // 1번 슬라이드가 가운데 보이기
+  autoplay: { delay: 5000 },
+  loop: true,
+  pagination: {
+    el: ".projects .swiper-pagination", // 페이지 번호 요소 선택자
+    clickable: true, // 사용자 페이지 번호 요소 제어 가능 여부
+  },
+  navigation: {
+    prevEl: ".projects .swiper-prev",
+    nextEl: ".projects .swiper-next",
+  },
+});
+
+const projectsElement = document.querySelector(".projects");
+const projectsToggleBtnElement = document.querySelector(".toggle-projects");
+const projectsShowIconElement = projectsToggleBtnElement.querySelector(
+  ".toggle-projects--show"
+);
+const projectsHideIconElement = projectsToggleBtnElement.querySelector(
+  ".toggle-projects--hide"
+);
+
+let isHidePromotion = false;
+
+projectsToggleBtnElement.addEventListener("click", function () {
+  isHidePromotion = !isHidePromotion;
+  if (isHidePromotion) {
+    // 숨김 처리
+    projectsElement.classList.add("hide");
+    projectsShowIconElement.classList.add("hide");
+    projectsHideIconElement.classList.remove("hide");
+  } else {
+    // 보임 처리
+    projectsElement.classList.remove("hide");
+    projectsHideIconElement.classList.add("hide");
+    projectsShowIconElement.classList.remove("hide");
+  }
+});
