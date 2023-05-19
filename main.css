@@ -26,13 +26,70 @@ a:hover {
 
   width: 1100px;
 }
+.btn {
+  cursor: pointer;
+
+  display: block;
+
+  box-sizing: border-box;
+
+  padding: 10px;
+
+  border: 2px solid #333;
+  border-radius: 4px;
+
+  width: 130px;
+
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+
+  transition: 0.5s;
+}
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse {
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse:hover {
+  background-color: transparent;
+  color: #333;
+}
+.btn.btn--brown {
+  color: #592b18;
+  border-color: #592b18;
+}
+.btn.btn--brown:hover {
+  color: #fff;
+  background-color: #592b18;
+}
+.btn.btn--gold {
+  color: #d9aa8a;
+  border-color: #d9aa8a;
+}
+.btn.btn--gold:hover {
+  color: #fff;
+  background-color: #d9aa8a;
+}
+.btn.btn--white {
+  color: #fff;
+  border-color: #fff;
+}
+.btn.btn--white:hover {
+  color: #333;
+  background-color: #fff;
+}
 
 /* HEADER */
 header {
-  /* TODO 정리: relative 가로 너비 최대 사용 -> fixed/absolute는  너비 최소 사용*/
-  /* position: relative; */
   position: fixed;
   top: 0;
+
+  z-index: 10;
 
   border-bottom: 1px solid #c8c8c8;
 
@@ -164,8 +221,7 @@ header .main-menu {
 
   z-index: 1;
 }
-header .main-menu .item {
-}
+
 header .main-menu .item:hover {
   cursor: pointer;
 }
@@ -266,4 +322,58 @@ header .badges .badge {
   margin-bottom: 12px;
   border-radius: 10px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* VISUAL */
+.visual {
+  margin-top: 120px;
+
+  background-image: url('./images/visual_bg.jpg');
+  background-position: center;
+}
+
+.visual .inner {
+  height: 646px;
+}
+
+.visual .title {
+  position: absolute;
+  top: 88px;
+  left: -10px;
+}
+
+.visual .title .btn {
+  position: absolute;
+  top: 259px;
+  left: 173px;
+}
+
+.visual .cup1.image {
+  position: absolute;
+  bottom: 0;
+  right: -47px;
+}
+.visual .cup1.text {
+  position: absolute;
+  top: 38px;
+  right: 171px;
+}
+.visual .cup2.image {
+  position: absolute;
+  bottom: 0;
+  right: 162px;
+}
+.visual .cup2.text {
+  position: absolute;
+  top: 321px;
+  right: 416px;
+}
+.visual .spoon {
+  position: absolute;
+  bottom: 0;
+  left: 275px;
+}
+
+.visual .fade-in {
+  opacity: 0;
 }

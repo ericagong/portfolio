@@ -44,3 +44,13 @@ window.addEventListener(
     }
   }, 300)
 );
+
+const fadeInElements = document.querySelectorAll(".visual .fade-in");
+
+// 순차적으로 이미지 보이기
+fadeInElements.forEach(function (fadeInElement, index) {
+  gsap.to(fadeInElement, 1, {
+    delay: (index + 1) * 0.5,
+    opacity: 1,
+  });
+});
