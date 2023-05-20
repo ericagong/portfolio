@@ -21,6 +21,7 @@ serachInputElement.addEventListener("blur", function () {
 });
 
 const badgesElement = document.querySelector("header .badges");
+const scrollTopBtnElement = document.querySelector("#scroll-top");
 
 // lodash library 사용해 throttle 기능 구현
 // gsap library 사용해 애니메이션 구현
@@ -35,15 +36,32 @@ window.addEventListener(
         opacity: 0,
         display: "none",
       });
+
+      // 버튼 보이기
+      gsap.to(scrollTopBtnElement, 0.6, {
+        x: 0,
+      });
     } else {
       // badges 보이기
       gsap.to(badgesElement, 0.6, {
         opacity: 1,
         display: "block",
       });
+
+      // 버튼 숨기기
+      gsap.to(scrollTopBtnElement, 0.6, {
+        x: 100,
+      });
     }
   }, 300)
 );
+
+scrollTopBtnElement.addEventListener("click", function () {
+  // 화면 스크롤 위치를 최상단으로 이동
+  gsap.to(window, 0.7, {
+    scrollTo: 0,
+  });
+});
 
 const fadeInElements = document.querySelectorAll(".visual .fade-in");
 
