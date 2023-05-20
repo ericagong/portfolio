@@ -482,10 +482,6 @@ header .badges .badge {
   font-size: 30px;
 }
 
-.notice .notice-line .inner__right .toggle-projects .material-icons-round {
-  font-size: 30px;
-}
-
 .notice .notice-line .inner__right .toggle-projects .material-icons-round.hide {
   font-size: 0;
 }
@@ -585,4 +581,135 @@ header .badges .badge {
 .notice .projects .swiper-next:hover {
   background-color: #333;
   color: #fff;
+}
+
+/* CONTACTS  */
+.contacts {
+  position: relative;
+}
+
+.contacts .bg-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 50%;
+  height: 100%;
+
+  background-color: #272727;
+}
+
+.contacts .bg-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 50%;
+  height: 100%;
+
+  background-color: #d5c898;
+}
+
+.contacts .inner {
+  height: 241px;
+
+  background-image: url('./images/rewards.jpg');
+}
+
+.contacts .btn-group {
+  position: absolute;
+  bottom: 24px;
+  right: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 250px;
+}
+
+.contacts .btn-group .btn.github {
+  margin-right: 10px;
+}
+
+.contacts .btn-group .btn.blog {
+  width: 110px;
+}
+
+.contacts .btn-group .btn.email {
+  flex-grow: 1;
+
+  margin-top: 10px;
+}
+
+/* YOUTUBE */
+.youtube {
+  overflow: hidden;
+
+  position: relative;
+
+  height: 700px;
+
+  background-color: #333;
+}
+
+.youtube .youtube__area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin-top: calc(1920px * 9 / 16 / -2); /* 16: 9 비율이 세로 너비 */
+  margin-left: calc(1920px / -2);
+
+  width: 1920px;
+}
+
+.youtube .youtube__area::before {
+  content: '';
+  display: block; /* ::before는 inline 요소이므로 block 처리해야 가로, 세로 가질 수 있음 */
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%; /* 16:9 비율 */
+}
+
+.youtube .youtube__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url('./images/video_cover_pattern.png');
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#player {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.youtube .inner {
+  height: 700px;
+}
+
+.youtube .floating1 {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+.youtube .floating2 {
+  position: absolute;
+  top: 350px;
+  left: 150px;
+}
+
+.youtube .floating3 {
+  position: absolute;
+  bottom: -200px;
+  right: 0;
 }
