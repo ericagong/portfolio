@@ -137,3 +137,7 @@ spyElements.forEach(function (spyElement) {
     .setClassToggle(spyElement, "show") // triggerHook으로 지정한 지점을 넘어서는 순간 show 클래스 추가
     .addTo(new ScrollMagic.Controller());
 });
+
+const thisYear = document.querySelector(".this-year");
+
+thisYear.textContent = new Date().getFullYear();

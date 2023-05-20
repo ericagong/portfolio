@@ -801,7 +801,7 @@ header .badges .badge {
   width: auto;
 }
 
-/*PROJECT3*/
+/* PROJECT3 */
 .project3 {
   background-image: url('../images/favorite_bg.jpg');
   background-repeat: no-repeat;
@@ -831,7 +831,7 @@ header .badges .badge {
   width: 362px;
 }
 
-/*project4-intro INTRO */
+/* PROJECT4 INTRO */
 .project4-intro {
   background-image: url('../images/reserve_store_bg.jpg');
   background-repeat: no-repeat;
@@ -884,7 +884,7 @@ header .badges .badge {
   margin: auto;
 }
 
-/*PROJECT4*/
+/* PROJECT4 */
 .project4 {
   background-image: url('../images/find_store_bg.jpg');
 }
@@ -929,4 +929,38 @@ header .badges .badge {
 }
 .project4 .text-group .more .btn {
   width: auto;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid #333;
+
+  background-color: #272727;
+}
+footer .inner {
+  padding: 30px 0;
+}
+footer .info {
+  margin-top: 30px;
+
+  text-align: center;
+}
+footer .info span {
+  margin-right: 20px;
+
+  font-size: 12px;
+  color: #999;
+}
+footer .info span:last-child {
+  margin-right: 0;
+}
+footer .copyright {
+  margin-top: 12px;
+
+  font-size: 12px;
+  text-align: center;
+  color: #999;
+}
+footer .logo {
+  margin: 30px auto 0;
 }
