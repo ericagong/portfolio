@@ -125,3 +125,15 @@ function random(min, max) {
 floatingObject(".floating1", 1, 15);
 floatingObject(".floating2", 0.5, 15);
 floatingObject(".floating3", 1.5, 20);
+
+const spyElements = document.querySelectorAll("section.scroll-spy");
+
+spyElements.forEach(function (spyElement) {
+  // new ScrollMagic.Scene({ 옵션 })
+  new ScrollMagic.Scene({
+    triggerElement: spyElement, // 보여짐 여부를 감시할 요소를 지정
+    triggerHook: 0.8, // 뷰포트의 0~1 사이의 값으로 설정
+  })
+    .setClassToggle(spyElement, "show") // triggerHook으로 지정한 지점을 넘어서는 순간 show 클래스 추가
+    .addTo(new ScrollMagic.Controller());
+});

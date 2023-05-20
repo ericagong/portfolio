@@ -84,6 +84,36 @@ a:hover {
   background-color: #fff;
 }
 
+/*BACK TO POSITION*/
+.back-to-position {
+  /* 기본적으로 화면에 안보이는 상태 */
+  opacity: 0;
+  transition: 1s;
+}
+.back-to-position.to-right {
+  transform: translateX(-150px);
+}
+.back-to-position.to-left {
+  transform: translateX(150px);
+}
+.show .back-to-position {
+  /* show 클래스값을 가지면 화면에 보이며 원래 위치로 이동 */
+  opacity: 1;
+  transform: translateX(0);
+}
+.show .back-to-position.delay-0 {
+  transition-delay: 0s;
+}
+.show .back-to-position.delay-1 {
+  transition-delay: 0.3s;
+}
+.show .back-to-position.delay-2 {
+  transition-delay: 0.6s;
+}
+.show .back-to-position.delay-3 {
+  transition-delay: 0.9s;
+}
+
 /* HEADER */
 header {
   position: fixed;
@@ -708,8 +738,195 @@ header .badges .badge {
   left: 150px;
 }
 
-.youtube .floating3 {
+/* PROJECT1 */
+.project1 {
+  background-image: url('./images/season_product_bg.jpg');
+}
+
+.project1 .inner {
+  height: 400px;
+}
+
+.project1 > img {
+}
+
+.project1 .floating3 {
   position: absolute;
-  bottom: -200px;
+  top: -200px;
   right: 0;
+}
+
+.project1 .text-group {
+  position: absolute;
+  top: 110px;
+  right: 100px;
+}
+
+.project1 .text-group .title {
+  margin-bottom: 10px;
+}
+
+.project1 .text-group .description {
+  margin-bottom: 15px;
+}
+
+.project1 .text-group .more .btn {
+  width: auto;
+}
+
+/* PROJECT2 */
+.project2 {
+  background-image: url('../images/reserve_bg.jpg');
+}
+.project2 .inner {
+  height: 400px;
+}
+.project2 .logo {
+  position: absolute;
+  top: 110px;
+  left: 0;
+}
+.project2 .text-group {
+  position: absolute;
+  top: 124px;
+  left: 208px;
+}
+.project2 .product {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.project2 .text-group .more .btn {
+  width: auto;
+}
+
+/*PROJECT3*/
+.project3 {
+  background-image: url('../images/favorite_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* 스크롤 시 뷰포트에 배경 고정 */
+  background-size: cover; /* 요소의 더 넓은 너비에 맞춰 출력 */
+}
+.project3 .inner {
+  padding: 110px 0;
+}
+.project3 .text-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  margin-left: 100px;
+
+  width: 362px;
+}
+.project3 .text-group .title {
+  margin-bottom: 40px;
+}
+.project3 .text-group .description {
+  margin-bottom: 40px;
+}
+.project3 .text-group .more .btn {
+  width: 362px;
+}
+
+/*project4-intro INTRO */
+.project4-intro {
+  background-image: url('../images/reserve_store_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.project4-intro .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 600px;
+}
+.project4-intro .medal {
+  width: 334px;
+  height: 334px;
+
+  perspective: 600px;
+}
+.project4-intro .medal .front,
+.project4-intro .medal .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+
+  width: inherit;
+  height: inherit;
+
+  transition: 1s;
+}
+.project4-intro .medal .front {
+  transform: rotateY(0deg);
+}
+.project4-intro .medal:hover .front {
+  transform: rotateY(180deg);
+}
+.project4-intro .medal .back {
+  transform: rotateY(-180deg);
+}
+.project4-intro .medal:hover .back {
+  transform: rotateY(0deg);
+}
+.project4-intro .medal .back .btn {
+  position: absolute;
+  top: 240px;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+}
+
+/*PROJECT4*/
+.project4 {
+  background-image: url('../images/find_store_bg.jpg');
+}
+.project4 .inner {
+  height: 400px;
+}
+.project4 .texture1 {
+  position: absolute;
+  top: 0;
+  left: 400px;
+}
+.project4 .texture2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.project4 .picture {
+  position: absolute;
+
+  border-radius: 50%;
+
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.5);
+}
+.project4 .picture1 {
+  top: -60px;
+  left: 0;
+}
+.project4 .picture2 {
+  top: 150px;
+  left: 250px;
+}
+.project4 .text-group {
+  position: absolute;
+  top: 120px;
+  left: 550px;
+}
+.project4 .text-group .title {
+  margin-bottom: 20px;
+}
+.project4 .text-group .description {
+  margin-bottom: 20px;
+}
+.project4 .text-group .more .btn {
+  width: auto;
 }
